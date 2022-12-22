@@ -1,0 +1,40 @@
+.clients__title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients__list {
+  @extend %flex-align;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.clients__item {
+  width: 170px;
+  height: 92px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients__link {
+  width: 100%;
+  height: 100%;
+  @extend %flex-align;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  @include transition(fill, border-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}

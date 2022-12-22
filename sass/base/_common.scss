@@ -1,0 +1,42 @@
+body {
+  font-family: var(--main-font);
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.about,
+.projects {
+  background: var(--main-color);
+}
