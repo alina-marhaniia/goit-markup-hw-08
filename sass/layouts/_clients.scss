@@ -28,7 +28,8 @@
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
-  @include transition(fill, border-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     fill: var(--accent-color);

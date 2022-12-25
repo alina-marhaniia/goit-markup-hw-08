@@ -10,7 +10,7 @@
   --element-gap: 30px;
 }
 
-.subscribe-form__button, .social-media__link, .social-media__list, .checkbox__icon, .checkbox, .clients__link, .clients__list, .social-list__link, .social-list {
+.subscribe-form__button, .social-media__link, .social-media__list, .checkbox__icon, .checkbox, .clients__link, .clients__list, .social-list__link, .social-list, .contacts__link, .header__contacts, .header__nav {
   display: flex;
   align-items: center;
 }
@@ -84,31 +84,17 @@ img {
 
 .container {
   width: 100%;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
 
 .header__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.2;
   color: var(--secondary-text-color);
 }
@@ -118,40 +104,18 @@ img {
 }
 
 .header {
-  position: relative;
   background-color: var(--main-color);
   border-bottom: 1px solid #ececec;
 }
 
-.menu-button {
-  display: inline-flex;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-.menu-button .icon-cross {
-  display: none;
-}
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-.menu-button.is-open .icon-menu {
-  display: none;
-}
-
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--main-color);
-}
-.mobile-menu.is-open {
-  display: block;
+.site-nav {
+  display: flex;
+  margin-left: 94px;
 }
 
 .site-nav__link {
+  position: relative;
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -176,6 +140,22 @@ img {
   left: 0;
   border-radius: 2px;
   background-color: var(--accent-color);
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__contacts {
+  margin-left: auto;
+  justify-content: center;
+}
+
+.contacts__item {
+  margin-left: 50px;
+}
+.contacts__item:first-child {
+  margin-left: 0;
 }
 
 .contacts__link {
@@ -300,11 +280,6 @@ img {
 
 .projects {
   padding-bottom: 94px;
-}
-@media screen and (max-width: 1200px) {
-  .projects {
-    display: none;
-  }
 }
 
 .projects__title {
