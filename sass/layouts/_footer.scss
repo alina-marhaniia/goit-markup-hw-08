@@ -4,13 +4,18 @@
 }
 
 .footer-main {
-  display: flex;
-  text-align: left;
+  // display: flex;
+  // text-align: left;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    padding-top: 60px;
+  }
 }
 
-.footer__contacts {
-  margin-top: 60px;
-}
+// .footer__contacts {
+//   // margin-top: 60px;
+// }
 
 .header__logo--inverse {
   color: var(--main-color);
@@ -54,8 +59,11 @@
 .footer__social-media {
   width: 206px;
   height: 80px;
-  margin-top: 72px;
-  margin-left: 70px;
+  // margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-top: 60px;
+  }
 }
 
 .social-media__title {

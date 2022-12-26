@@ -3,13 +3,12 @@
 }
 
 .about__list {
-  display: flex;
-  text-align: left;
+  // display: flex;
+  text-align: center;
 }
 
 .about__item {
-  width: 270px;
-  margin-left: var(--element-gap);
+  // margin-left: var(--element-gap);
 
   &:first-child {
     margin-left: 0px;
@@ -25,6 +24,10 @@
     background-position: center;
     border-radius: 4px;
   }
+
+  @media screen and (max-width: 767px) {
+    width: 480px;
+  }
 }
 
 .about__subtitle {
@@ -35,10 +38,12 @@
 }
 
 .about__text {
+  text-align: left;
   font-size: 14px;
   line-height: 1.71;
   margin-top: 10px;
   color: var(--main-text-color);
+  margin-bottom: 30px;
 }
 
 .icon-antenna::before {
