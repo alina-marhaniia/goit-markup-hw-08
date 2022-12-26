@@ -8,6 +8,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -22,6 +23,10 @@
   &.is-open .icon-menu {
     display: none;
   }
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
 }
 
 .mobile-menu {
@@ -33,6 +38,7 @@
   background-color: var(--main-color);
   padding: 48px 40px;
   text-align: left;
+  z-index: 999;
 
   &.is-open {
     display: block;
@@ -58,6 +64,7 @@
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
+
 .header__nav {
   @media screen and (max-width: 767px) {
     display: flex;
@@ -95,6 +102,11 @@
 
 .site-nav {
   margin-bottom: 306px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    display: flex;
+  }
   // display: flex;
   // margin-left: 94px;
 }
@@ -140,7 +152,9 @@
 }
 
 .header__contacts {
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   // @extend %flex-align;
   // margin-left: auto;
   // justify-content: center;
