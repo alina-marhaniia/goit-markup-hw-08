@@ -3,31 +3,41 @@
 }
 
 .about__list {
-  // display: flex;
   text-align: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .about__item {
-  // margin-left: var(--element-gap);
-
-  &:first-child {
-    margin-left: 0px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
 
-  &::before {
-    display: block;
-    content: '';
-    height: 120px;
-    background-color: #f5f4fa;
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
+  @media screen and (min-width: 1200px) {
+    margin-left: var(--element-gap);
+    &:first-child {
+      margin-left: 0px;
+    }
   }
+}
 
-  @media screen and (max-width: 767px) {
-    width: 480px;
-  }
+&::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
 }
 
 .about__subtitle {
