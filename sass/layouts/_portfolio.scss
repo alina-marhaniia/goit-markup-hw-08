@@ -9,12 +9,15 @@
 
 .filter {
   display: flex;
-  // justify-content: center;
-  // margin-bottom: 50px;
 
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     align-content: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -60,20 +63,31 @@
 }
 
 .card-set {
-  // display: flex;
-  // flex-wrap: wrap;
   @media screen and (max-width: 767px) {
     margin-top: 40px;
     width: 100%;
   }
   margin-left: calc(-1 * var(--element-gap));
   margin-top: calc(-1 * var(--element-gap));
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .card-set__item {
-  flex-basis: calc(100% / 3 - var(--element-gap));
   margin-left: var(--element-gap);
   margin-top: var(--element-gap);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - var(--element-gap));
+  }
 }
 
 .card-set__box {
