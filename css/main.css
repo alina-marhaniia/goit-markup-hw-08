@@ -46,6 +46,7 @@ textarea {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -273,7 +274,7 @@ img {
   .contacts__link {
     font-size: 12px;
     padding-bottom: 10px;
-    margin-left: 96px;
+    margin-left: 80px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -328,24 +329,43 @@ img {
 .overlay {
   max-width: 1600px;
   margin: 0 auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  height: 400px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 767px) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
-    height: 400px;
+    background-image: url(../images/hero_mob@2x.jpg);
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .overlay {
-    height: 400px;
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url(../images/hero_tab@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .overlay {
+    width: 1200px;
     height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desktop.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url(../images/hero_desktop@2x.jpg);
   }
 }
 
@@ -1291,6 +1311,9 @@ img {
 }
 
 .card-set__box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-set__box:hover {
@@ -1336,6 +1359,7 @@ img {
   padding: 20px 24px;
   text-align: left;
   border: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .card-set__title {

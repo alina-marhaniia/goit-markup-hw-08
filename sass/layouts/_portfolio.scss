@@ -91,6 +91,9 @@
 }
 
 .card-set__box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   @include transition(box-shadow);
 
   &:hover {
@@ -138,6 +141,7 @@
   padding: 20px 24px;
   text-align: left;
   border: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .card-set__title {
