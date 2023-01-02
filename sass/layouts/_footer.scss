@@ -1,7 +1,14 @@
 .footer {
   background-color: var(--dark-background-color);
   padding-bottom: 60px;
-  padding-top: 60px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 60px;
+  }
 }
 
 .footer-main {
@@ -171,11 +178,11 @@
   color: var(--main-color);
   outline: none;
 
-  @media screen and (max-width: 767px) {
-    width: 450px;
-  }
+  //   @media screen and (min-width: 480px), (max-width: 1199px) {
+  //     width: 450px;
+  //   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     width: 450px;
   }
   @media screen and (min-width: 1200px) {

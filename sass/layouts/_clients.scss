@@ -1,3 +1,17 @@
+.clients {
+  @media screen and (min-width: 480px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
+}
+
 .clients__title {
   line-height: 1.16;
   text-align: center;
@@ -10,7 +24,6 @@
 
   @media screen and (min-width: 1200px) {
     font-size: 36px;
-    margin-top: 50px;
   }
 }
 

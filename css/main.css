@@ -155,11 +155,6 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .site-nav {
-    margin-bottom: 306px;
-  }
-}
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
@@ -340,14 +335,8 @@ img {
     background-image: url(../images/hero_mob@2x.jpg);
   }
 }
-@media screen and (min-width: 480px) {
-  .overlay {
-    width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
   .overlay {
-    width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab.jpg);
   }
 }
@@ -358,7 +347,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .overlay {
-    width: 1200px;
     height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desktop.jpg);
   }
@@ -390,6 +378,7 @@ img {
   .hero__title {
     font-size: 26px;
     line-height: 1.62;
+    max-width: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -411,6 +400,24 @@ img {
 
 .about {
   padding-bottom: 0;
+  padding-top: 0;
+}
+@media screen and (min-width: 480px) {
+  .about {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -422,6 +429,7 @@ img {
   .about__list {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -430,7 +438,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about__item {
     flex-basis: calc((100% - 60px) / 2);
     margin: 15px;
@@ -488,6 +496,7 @@ img {
 }
 
 .projects {
+  padding-top: 0;
   padding-bottom: 94px;
   text-align: center;
 }
@@ -541,18 +550,28 @@ img {
 .team {
   width: 100%;
   background-color: #f5f4fa;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 450px), (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__title {
+  margin-bottom: 30px;
+  font-size: 28px;
   text-align: center;
   line-height: 1.16;
   color: var(--secondary-text-color);
-}
-@media screen and (max-width: 767px) {
-  .team__title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .team__title {
@@ -565,6 +584,7 @@ img {
   .team__member {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -655,6 +675,21 @@ img {
   fill: var(--main-color);
 }
 
+@media screen and (min-width: 480px) {
+  .clients {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
+}
+
 .clients__title {
   line-height: 1.16;
   text-align: center;
@@ -669,7 +704,6 @@ img {
 @media screen and (min-width: 1200px) {
   .clients__title {
     font-size: 36px;
-    margin-top: 50px;
   }
 }
 
@@ -984,7 +1018,16 @@ img {
 .footer {
   background-color: var(--dark-background-color);
   padding-bottom: 60px;
-  padding-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    padding-top: 60px;
+  }
 }
 
 .footer-main {
@@ -1158,12 +1201,7 @@ img {
   color: var(--main-color);
   outline: none;
 }
-@media screen and (max-width: 767px) {
-  .subscribe-form__input {
-    width: 450px;
-  }
-}
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .subscribe-form__input {
     width: 450px;
   }
@@ -1392,6 +1430,7 @@ img {
 }
 .menu-button.is-open .icon-cross {
   display: block;
+  position: fixed;
 }
 .menu-button.is-open .icon-menu {
   display: none;
@@ -1407,8 +1446,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--main-color);
   padding: 48px 40px;
   text-align: left;
@@ -1467,4 +1506,11 @@ img {
 
 .mobile-menu__social-item:not(:first-child) {
   padding-left: 10px;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

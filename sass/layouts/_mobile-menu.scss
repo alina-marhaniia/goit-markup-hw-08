@@ -16,6 +16,7 @@
   }
   &.is-open .icon-cross {
     display: block;
+    position: fixed;
   }
   &.is-open .icon-menu {
     display: none;
@@ -31,8 +32,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--main-color);
   padding: 48px 40px;
   text-align: left;
@@ -89,4 +90,11 @@
 
 .mobile-menu__social-item:not(:first-child) {
   padding-left: 10px;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }

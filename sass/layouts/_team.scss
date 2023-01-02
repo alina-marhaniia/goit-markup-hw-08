@@ -1,17 +1,27 @@
 .team {
   width: 100%;
   background-color: #f5f4fa;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media screen and (min-width: 450px), (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__title {
+  margin-bottom: 30px;
+  font-size: 28px;
   text-align: center;
   line-height: 1.16;
   color: var(--secondary-text-color);
 
-  @media screen and (max-width: 767px) {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
   @media screen and (min-width: 1200px) {
     font-size: 36px;
     margin-bottom: 50px;
@@ -22,6 +32,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 
   @media screen and (min-width: 1200px) {
